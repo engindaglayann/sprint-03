@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Ekle</title>
+    <link rel="stylesheet" href="css/2416501069.css">
+    <script type="module" src="js/event-form.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Etkinlik Ekle</h1>
+        <nav><a href="index.html">Ana Sayfa</a><a href="etkinlikler.html">Etkinlikler</a><a href="etkinlik-ekle.html">Ekle</a></nav>
+    </header>
+    <main>
+        <form id="etkinlik-formu" novalidate>
+            <label for="ad">Etkinlik adı</label>
+            <input type="text" id="ad" name="ad">
+            <span class="hata-mesaj" id="ad-hata"></span>
+
+            <label for="kategori">Kategori</label>
+            <select id="kategori" name="kategori">
+                <option value="">Seçiniz ▾</option>
+                <option value="Seminer">Seminer</option>
+                <option value="Atölye">Atölye</option>
+                <option value="Söyleşi">Söyleşi</option>
+            </select>
+            <span class="hata-mesaj" id="kategori-hata"></span>
+
+            <label for="tarih">Tarih</label>
+            <input type="date" id="tarih" name="tarih">
+            <span class="hata-mesaj" id="tarih-hata"></span>
+
+            <label for="saat">Saat</label>
+            <input type="time" id="saat" name="saat">
+            <span class="hata-mesaj" id="saat-hata"></span>
+
+            <label for="yer">Yer</label>
+            <input type="text" id="yer" name="yer">
+            <span class="hata-mesaj" id="yer-hata"></span>
+
+            <label for="kontenjan">Kontenjan</label>
+            <input type="number" id="kontenjan" name="kontenjan">
+            <span class="hata-mesaj" id="kontenjan-hata"></span>
+
+            <label for="aciklama">Açıklama</label>
+            <textarea id="aciklama" name="aciklama" rows="3"></textarea>
+            
+            <button type="submit">Kaydet</button>
+        </form>
+        <div id="form-mesaj"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* Engin Dağlayan — 2416501069 */
+:root {
+  --no: 2416501069;
+  --ton: 349; 
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
+  --font: "Lucida Console", monospace;
+  --bosluk-m: 1rem;
+  --kose: 8px;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--renk-zemin);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header { background-color: var(--renk-ana); color: white; padding: var(--bosluk-m); }
+nav a { color: white; margin-right: var(--bosluk-m); text-decoration: none; }
+main { padding: var(--bosluk-m); max-width: 1200px; margin: auto; }
+
+/* Grid Sistemi (Kartlar) */
+.etkinlik-grid { display: grid; grid-template-columns: 1fr; gap: var(--bosluk-m); }
+@media (min-width: 768px) {
+  .etkinlik-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+}
+
+article.kart { background: white; padding: var(--bosluk-m); border-radius: var(--kose); box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+article.kart a { margin-top: auto; color: var(--renk-ana); text-decoration: none; font-weight: bold; }
+
+/* Filtre Alanı */
+.filtre { display: grid; gap: 1rem; margin-bottom: 1.5rem; background: white; padding: 1rem; border-radius: var(--kose); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+@media (min-width: 768px) { .filtre { grid-template-columns: 1fr 1fr; } }
+.filtre label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+.filtre input, .filtre select { width: 100%; box-sizing: border-box; }
+
+/* Form Tasarımı ve Hatalar */
+form { display: flex; flex-direction: column; max-width: 400px; }
+label { margin-top: var(--bosluk-m); font-weight: bold; display: block; }
+input, select, textarea { padding: 0.5rem; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+button { margin-top: 1.5rem; padding: 0.75rem; background-color: var(--renk-ana); color: white; border: none; border-radius: 4px; cursor: pointer; }
+
+input[aria-invalid="true"], select[aria-invalid="true"] { border-color: red; background-color: #ffe6e6; }
+.hata-mesaj { color: red; font-size: 0.8rem; display: block; min-height: 1.2em; margin-top: 0.2rem; }
+.basari-kutu { background: #d4edda; color: #155724; padding: 1rem; border-radius: 4px; margin-top: 1rem; }
+.hata-kutu { background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 4px; margin-top: 1rem; }
+
+/* Detay Sayfası */
+.detay-grid { display: flex; flex-direction: column; gap: 2rem; margin-top: var(--bosluk-m); }
+.kunye-listesi dt { margin-top: 0.5rem; color: var(--renk-ana); }
+.kunye-listesi dd { margin: 0 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 1px solid #eee; }
+@media (min-width: 768px) {
+  .detay-grid { flex-direction: row; align-items: flex-start; }
+  .afis-alani { flex: 1; }
+  .kunye-alani { flex: 2; }
+}
