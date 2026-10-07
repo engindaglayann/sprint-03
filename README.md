@@ -1,5 +1,5 @@
 # Kampüs Etkinlikleri - Sprint 3
-Canlı Link: 
+Canlı Link: https://sprint-033.vercel.app/index.html
 
 - **Öğrenci Adı:** Engin Dağlayan
 - **Öğrenci Numarası:** 2416501069
